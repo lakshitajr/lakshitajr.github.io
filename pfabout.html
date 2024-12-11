@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* styling for the div with background image */
+        .background-div {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./aboutmebg.png);
+            background-size: cover;
+            /* Ensures the image covers the entire div */
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+
+        }
+
+        /* skills section background image */
+        .background-skill {
+
+            width: 100%;
+            height: 100vh;
+            background-image: url(./skills.jpg);
+            background-size: cover;
+            /* Ensures the image covers the entire div */
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- top nav bar -->
+
+    <nav style="background-color: black;" class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <!-- Navbar logo -->
+            <img style="width: 2%;" src="./flower icon white.png" alt="">
+            <a style="color: rgb(255, 115, 0);" class="navbar-brand" href="#">MyPortfolio</a>
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav me-auto ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link " href="./pfhome.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-weight: bold;" class="nav-link active " href="./pfabout.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pfwork.html">Work</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pfcontact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pfsocial.html">Socials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- orange pop over tapes first column -->
+    <div class=" row background-div " style="background-color: black;">
+        <div class="col-4">
+            <a style="margin-left: 100px;" href="#" title="Living in" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="Mumbai"><img src="./locationtape.png" alt=""></a>
+            <a style="margin-left: 100px;" href="#" title="Hometown" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="Originally from Pune"><img src="./hometape.png" alt=""></a>
+            <a style="margin-left: 130px;" href="#" title="Personality type" data-bs-toggle="popover"
+                data-bs-trigger="hover" data-bs-content="INTJ "><img src="./mbtitape.png" alt=""></a>
+
+            <a style="margin-left: 100px;" href="#" title="Education" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="Middle School from Vidya Valley School and High school (PCM) from Suryadatta National school; Pune"><img
+                    src="./schooltape.png" alt=""></a>
+            <a style="margin-left: 300px;" href="#" title="Personal Interests" data-bs-toggle="popover"
+                data-bs-trigger="hover"
+                data-bs-content="Kpop,Kdramas,Japanese Anime,Cooking,Music,Travelling,  Painting,Food,Fashion"><img
+                    src="./interesttape.png" alt=""></a>
+
+
+
+        </div>
+        <!-- orange pop over tapes second column -->
+        <div class="col-4">
+            <a style="margin-left: 380px;" href="#" title="Hover" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="Hi, there!"><img src="./hover tape.png" alt=""></a>
+            <!-- blank -->
+
+
+        </div>
+        <!-- orange pop over tapes third column -->
+        <div class="col-4">
+
+            <a style="margin-left: 50px;width: 200%;" href="#" title="Age" data-bs-toggle="popover"
+                data-bs-trigger="hover" data-bs-content="19 years old"><img src="./age tape.png" alt=""></a>
+
+            <a style="margin-left: 70px ;" href="#" title="University" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="Pursuing Bachelor's in Design at Atlas Skilltech University"><img
+                    src="./degreetape.png" alt=""></a>
+
+            <a style="margin-left: 150px ;" href="#" title="Hobbies" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="Photography,Cooking,Digital Art,Cycling,Binge watching,Personalizing"><img
+                    src="./hobbytape.png" alt=""></a>
+
+            <a style="margin-left: 360px;" href="#" title="Birthday" data-bs-toggle="popover" data-bs-trigger="hover"
+                data-bs-content="18 January"><img src="./bdaytape.png" alt=""></a>
+
+        </div>
+    </div>
+
+    <!-- script for popover tapes -->
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+    <!-- second section of page - skills -->
+    <div class="row background-skill " style="background-color: black;height: 130vh;">
+
+        <!-- skills images alignment  in columns-->
+        <div class="col">
+            <img style="width: 30%;margin-left: 660px; margin-top: 50px;" src="./skilltext.png" alt="">
+            <img style="width: 60%;margin-left: 280px;" src="./softwares.png" alt="">
+            <img style="width: 60%;margin-left: 280px;" src="./languagebox.png" alt="">
+        </div>
+        <div class="col">
+            <img style="width: 60%;;margin-top: 138px;" src="./softskillbox.png" alt="">
+            <img style="width: 55%;margin-left: 15px;margin-top: 48px;" src="./technicalskillbox.png" alt="">
+
+
+        </div>
+
+        <!--  ending nav bar -->
+        <div style="height: 35vh;background-color: black;margin-left: 1.7px;" class="row ">
+            <p class="text-center"> <img style="width: 2%;margin-top: 40px;" src="./flower icon white.png" alt=""></p>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a style="color: chocolate;" class="nav-link" href="./pfhome.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: chocolate;" class="nav-link" href="./pfwork.html">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: chocolate;" class="nav-link" href="./pfcontact.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+    </div>
+</body>

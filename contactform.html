@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    #responseMessage {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<!-- javascript exploration contact form linked to email js -->
+
+<body>
+
+  <div class="contact-form">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="user_name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="user_email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="user_message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <button type="button" onclick="sendEmail()">Send</button>
+    </form>
+    <p id="responseMessage"></p>
+  </div>
+  <!-- Javascript code -->
+  <!-- EmailJS SDK source link-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with template id and service id 
+    const publicKey = "PvNaQoxQtg_PSDHN7";
+    const serviceID = "service_pqd9fb3";
+    const templateID = "template_45lxch9";
+
+    (function () {
+      emailjs.init(publicKey);
+    })();
+
+    function sendEmail() {
+      const nameInput = document.getElementById("user_name").value.trim();
+      const emailInput = document.getElementById("user_email").value.trim();
+      const messageInput = document.getElementById("user_message").value.trim();
+      //alert(nameInput+emailInput+messageInput );
+      if (!nameInput || !emailInput || !messageInput) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      const inputFields = {
+        name: nameInput,
+        email: emailInput,
+        message: messageInput,
+      };
+
+
+      emailjs
+        .send(serviceID, templateID, inputFields)
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            document.getElementById("responseMessage").innerText =
+              "Email sent successfully!";
+
+            // Reset form fields
+            resetForm();
+
+            // clear the response message after a few seconds
+            setTimeout(() => {
+              document.getElementById("responseMessage").innerText = "";
+            }, 5000); // Clears after 5 seconds
+
+          },
+          function (error) {
+            console.error("FAILED...", error);
+            document.getElementById("responseMessage").innerText =
+              "Failed to send email. Please try again.";
+          }
+        );
+    }
+
+    //  Function to reset the form fields
+    function resetForm() {
+      document.getElementById("user_name").value = "";
+      document.getElementById("user_email").value = "";
+      document.getElementById("user_message").value = "";
+    }	
+  </script>
+  <!-- back button to return to website -->
+  <br>
+  <a style="margin-left: 800px;" href="./pfcontact.html">Back</a>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* General Reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Full-page section styles */
+        .full-page {
+            height: 100vh; /* Ensure each section is exactly one viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+
+        .home-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fills the container without distortion */
+        }
+
+        .content-row {
+            height: 100vh; /* Second page also fits the viewport height */
+        }
+
+        .portfolio-left img,
+        .portfolio-right img {
+            max-height: 80%; /* Ensures images fit within the page */
+            object-fit: contain;
+        }
+
+        .footer {
+            height: 30vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button style="background-color: chocolate;" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Welcome! Click here
+      </button>
+      
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              Modal body..
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div style="align-content: center;" class="row">
+        <button style="background-color: rgb(233, 103, 11);" type="button" class="btn btn-secondary " data-bs-toggle="modal" data-bs-target="#myModal">
+          Welcome! Click here
+        </button>
+        
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                Modal body..
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+  
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exploration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple JavaScript App</h1>
+        <p>Enter your name below, and I'll greet you!</p>
+        
+        <!-- Input Field -->
+        <input type="text" id="nameInput" placeholder="Enter your name" style="padding: 8px; width: 100%; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        
+        <!-- Button -->
+        <button onclick="sayHello()">Greet Me</button>
+        
+        <!-- Output -->
+        <p id="greetingMessage" style="margin-top: 20px; font-size: 1.2em; color: #007bff;"></p>
+    </div>
+
+    <script>
+        // JavaScript function to handle the greeting
+        function sayHello() {
+            // Get the input value
+            const name = document.getElementById("nameInput").value;
+
+            // Update the output message
+            const message = name
+                ? `Hello, ${name}! Welcome to JavaScript exploration!`
+                : "Please enter your name.";
+
+            document.getElementById("greetingMessage").textContent = message;
+        }
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f9f9f9;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple JavaScript Example</h1>
+    <p id="text">Click the button to change this text!</p>
+    
+    <!-- Button -->
+    <button onclick="changeText()">Click Me</button>
+    
+    <script>
+        // JavaScript function to change the text
+        function changeText() {
+            document.getElementById("text").textContent = "You've changed the text!";
+        }
+    </script>
+
+<div class="row" style="background-color: black; padding: 20px;">
+  <!-- Card 1 -->
+  <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width:350px;">  <!-- Adjusted card width -->
+          <img class="card-img-top" src="./profile photo1.jpg" alt="Card image" style="width:100%; height:auto;">
+          <div class="card-body text-left" style="height:250px;"> <!-- Reduced card body height -->
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width:350px;">
+          <img class="card-img-top" src="./profile photo1.jpg" alt="Card image" style="width:100%; height:auto;">
+          <div class="card-body text-left" style="height:250px;">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width:350px;">
+          <img class="card-img-top" src="./profile photo1.jpg" alt="Card image" style="width:100%; height:auto;">
+          <div class="card-body text-left" style="height:250px;">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width:350px;">
+          <img class="card-img-top" src="./profile photo1.jpg" alt="Card image" style="width:100%; height:auto;">
+          <div class="card-body text-left" style="height:250px;">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width:350px;">
+          <img class="card-img-top" src="./profile photo1.jpg" alt="Card image" style="width:100%; height:auto;">
+          <div class="card-body text-left" style="height:250px;">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+      <div class="card" style="width:350px;">
+          <img class="card-img-top" src="./profile photo1.jpg" alt="Card image" style="width:100%; height:auto;">
+          <div class="card-body text-left" style="height:250px;">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+</body>
+
+</html>
